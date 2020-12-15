@@ -12,7 +12,7 @@ class List extends React.Component {
     columns: this.props.columns || [],
   };
   static propTypes = {
-    title: PropTypes.node.isRequired,
+    title: PropTypes.node,
     image: PropTypes.string,
     description: PropTypes.node,
     columns: PropTypes.array,
@@ -47,9 +47,6 @@ class List extends React.Component {
           {this.state.columns.map(({ key, ...columnProps }) => (
             <Column key={key} {...columnProps} />
           ))}
-          {/* <Column columnTitle="Animals"></Column>
-          <Column columnTitle="Food"></Column>
-          <Column columnTitle="Plants"></Column> */}
         </div>
         <div className={styles.creator}>
           <Creator

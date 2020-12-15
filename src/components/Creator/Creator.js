@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
+    action: PropTypes.object,
   };
 
   static defaultProps = {
@@ -36,10 +37,12 @@ class Creator extends React.Component {
   };
 
   handleCancel = () => {
-    this.setState({
-      value: '',
-      visibleButtons: false,
-    });
+    if (window.confirm('Do You want delete title?')) {
+      this.setState({
+        value: '',
+        visibleButtons: false,
+      });
+    }
   };
 
   render() {

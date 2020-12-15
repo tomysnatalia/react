@@ -1,6 +1,7 @@
 export const settings = {
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
+  listCreatorText: 'Add new list',
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
@@ -8,6 +9,8 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  defaultImage:
+    'https://images.pexels.com/photos/230744/pexels-photo-230744.jpeg',
 };
 
 export const pageContents = {
