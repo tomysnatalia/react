@@ -3,15 +3,19 @@ import styles from './Column.scss';
 import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 import Creator from '../Creator/Creator.js';
-import Icon from '../Icon';
+import Icon from '../Icon/Icon';
 import { settings } from '../../data/dataStore';
 
 class Column extends React.Component {
   static propTypes = {
     title: PropTypes.string,
     cards: PropTypes.array,
-    icon: settings.defaultColumnIcon,
+    icon: PropTypes.string,
     addCard: PropTypes.func,
+  };
+
+  static defaultProps = {
+    icon: settings.defaultColumnIcon,
   };
 
   render() {
@@ -24,7 +28,7 @@ class Column extends React.Component {
           </span>
           {title}
         </h3>
-        <div className={styles.cards}>
+        <div>
           {cards.map((cardData) => (
             <Card key={cardData.id} {...cardData} />
           ))}
