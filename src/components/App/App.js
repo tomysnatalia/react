@@ -1,10 +1,7 @@
 import React from 'react';
 import styles from './App.scss';
 import List from '../List/ListContainer.js';
-// import { pageContents } from '../../data/dataStore';
 import PropTypes from 'prop-types';
-// import Creator from '../Creator/Creator';
-// import { settings } from '../../data/dataStore';
 
 class App extends React.Component {
   state = {
@@ -36,25 +33,6 @@ class App extends React.Component {
       ],
     }));
   }
-
-  // render() {
-  //   return (
-  //     <main className={styles.component}>
-  //       <h1 className={styles.title}>{pageContents.title}</h1>
-  //       <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
-  //       {/* <List {...listData} /> */}
-  //       {this.state.listData.map(({ key, ...listDataProps }) => (
-  //         <List key={key} {...listDataProps} />
-  //       ))}
-
-  //       <Creator
-  //         text={settings.listCreatorText}
-  //         action={(title) => this.addList(title)}
-  //       />
-  //     </main>
-  //   );
-  // }
-
   render() {
     const { title, subtitle, lists } = this.props;
     return (
